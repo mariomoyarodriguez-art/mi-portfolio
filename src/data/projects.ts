@@ -47,7 +47,7 @@ export const projectsData: Project[] = [
       de: ['Geofencing-Kontrolle', 'Rollenverwaltung', 'Abfrageoptimierung']
     },
     techStack: ['C#', 'Oracle Database', 'UML Architecture'],
-    githubUrl: 'https://github.com/tu-usuario/the-best-chef'
+    githubUrl: 'https://sistema-amarte.vercel.app'
   },
   {
     id: 'gutten-kleid',
@@ -65,6 +65,6 @@ export const projectsData: Project[] = [
       de: ['Sicheres Zahlungsgateway', 'Cloud-Asset-Speicherung', 'Entitäts-Beziehungs-Design']
     },
     techStack: ['React', 'Stripe', 'Cloudinary', 'Oracle SQL'],
-    githubUrl: 'https://github.com/tu-usuario/gutten-kleid'
+    githubUrl: 'https://gutten-kleid-app.vercel.app'
   }
 ];
