@@ -1,5 +1,4 @@
 // src/components/layout/HeroSection.tsx
-import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 
 const HeroSection = () => {

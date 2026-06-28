@@ -1,5 +1,5 @@
 // src/App.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import HeroSection from './components/layout/HeroSection';
 import ProjectCard from './components/ui/ProjectCard';
 import { projectsData } from './data/projects';
