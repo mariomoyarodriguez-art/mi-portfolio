@@ -29,7 +29,7 @@ export const projectsData: Project[] = [
       de: ['Simultane Übersetzung', 'Echtzeit-Kanäle', 'Ende-zu-Ende-Verschlüsselung']
     },
     techStack: ['React', 'Node.js', 'PostgreSQL', 'DeepL API'],
-    githubUrl: 'https://github.com/tu-usuario/whatsapp-x'
+    githubUrl: 'https://whatsapp-x-core.vercel.app'
   },
   {
     id: 'the-best-chef',
