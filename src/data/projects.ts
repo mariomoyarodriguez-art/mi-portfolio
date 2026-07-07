@@ -16,6 +16,7 @@ export const projectsData: Project[] = [
   {
     id: 'whatsapp-x',
     title: 'WhatsApp X',
+    imageUrl: '/whatsapp.jpg',
     shortDescription: {
       es: 'Aplicación de mensajería instantánea con traducción automatizada en tiempo real mediante integraciones API y arquitectura escalable.',
       en: 'Instant messaging application featuring real-time automated translation through API integrations and scalable architecture.',
@@ -34,6 +35,7 @@ export const projectsData: Project[] = [
   {
     id: 'the-best-chef',
     title: 'Amar-Te',
+    imageUrl: '/amar-te.jpg',
     shortDescription: {
       es: 'Sistema integral de gestión restaurantera con control de acceso basado en roles, geofencing y persistencia de datos empresarial.',
       en: 'Comprehensive restaurant management system featuring role-based access control, geofencing, and enterprise-grade data persistence.',
@@ -52,6 +54,7 @@ export const projectsData: Project[] = [
   {
     id: 'gutten-kleid',
     title: 'Gutten Kleid',
+    imageUrl: '/gutten-kleid.jpg',
     shortDescription: {
       es: 'Plataforma de comercio electrónico de alta fidelidad con pasarela de pagos integrada, gestión de activos multimedia y backend relacional robusto.',
       en: 'High-fidelity e-commerce platform with integrated payment gateway, multimedia asset management, and a robust relational backend.',

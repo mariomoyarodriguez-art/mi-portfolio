@@ -1,5 +1,5 @@
 // src/components/ui/ProjectCard.tsx
-import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Project } from '../../data/projects';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -7,25 +7,58 @@ interface ProjectCardProps {
   project: Project;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
   const { language, t } = useLanguage();
+  
+  const [showOverlay, setShowOverlay] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (cardRef.current && !cardRef.current.contains(event.target as Node)) {
+        setShowOverlay(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="bg-surface border border-textMuted/20 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col h-full group">
+    <div ref={cardRef} className="bg-surface border border-textMuted/20 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col h-full group">
       
-      {/* Contenedor de Imagen / Bloque de Identificación Superior */}
-      <div className="h-48 bg-[#0a0c10] border-b border-textMuted/20 flex items-center justify-center relative overflow-hidden">
-        <span className="text-textMuted/40 font-serif text-lg tracking-widest uppercase z-0 group-hover:scale-110 transition-transform duration-500 select-none">
-          {project.title}
-        </span>
+      <div 
+        className="h-48 bg-[#0a0c10] border-b border-textMuted/20 flex items-center justify-center relative overflow-hidden cursor-pointer"
+        onClick={() => setShowOverlay(!showOverlay)}
+      >
+        {project.imageUrl ? (
+          <img 
+            src={project.imageUrl} 
+            alt={project.title} 
+            className={`w-full h-full object-cover transition-all duration-500 ${
+              showOverlay ? 'opacity-10 scale-110' : 'opacity-80 hover:opacity-100'
+            }`}
+          />
+        ) : (
+          <span className={`text-textMuted/40 font-serif text-lg tracking-widest uppercase z-0 transition-all duration-500 select-none ${
+            showOverlay ? 'opacity-0 scale-110' : 'opacity-100'
+          }`}>
+            {project.title}
+          </span>
+        )}
         
-        {/* Capa superpuesta oscura interactiva (Hover) */}
-        <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
+        <div className={`absolute inset-0 bg-background/90 flex items-center justify-center gap-4 z-10 transition-opacity duration-300 ${
+          showOverlay ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}>
           {project.githubUrl && (
             <a 
               href={project.githubUrl} 
               target="_blank" 
               rel="noreferrer" 
+              onClick={(e) => e.stopPropagation()} 
               className="border border-textMuted text-textMain px-4 py-2 rounded text-sm hover:border-primary hover:text-primary transition-colors"
             >
               {t('cardCode')}
@@ -36,6 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={project.demoUrl} 
               target="_blank" 
               rel="noreferrer" 
+              onClick={(e) => e.stopPropagation()} 
               className="bg-primary text-textMain px-4 py-2 rounded text-sm hover:bg-opacity-80 transition-colors font-medium"
             >
               {t('cardDemo')}
@@ -44,16 +78,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
       </div>
 
-      {/* Cuerpo Técnico de la Tarjeta */}
       <div className="p-6 md:p-8 flex flex-col flex-grow">
         <h3 className="font-serif text-2xl font-bold mb-2 text-textMain">{project.title}</h3>
         
-        {/* Descripción localizada dinámicamente */}
         <p className="text-textMuted text-sm mb-6 leading-relaxed flex-grow">
           {project.shortDescription[language]}
         </p>
 
-        {/* Viñetas de Características Clave localizadas */}
         <div className="mb-6">
           <h4 className="text-xs uppercase tracking-widest text-primary font-bold mb-3">
             {t('cardFeatures')}
@@ -68,7 +99,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </ul>
         </div>
 
-        {/* Píldoras de Tecnologías Universales */}
         <div className="mt-auto pt-4 border-t border-textMuted/10">
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech, idx) => (
