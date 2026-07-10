@@ -24,7 +24,7 @@ const PortfolioContent = () => {
     <div className="min-h-screen p-8 md:p-24 max-w-6xl mx-auto">
       
       <nav className="flex flex-col sm:flex-row justify-between items-center py-6 mb-10 border-b border-textMuted/20 gap-4">
-        <span className="font-serif font-bold text-xl tracking-wider">MMR.</span>
+        <span className="font-serif font-bold text-xl tracking-wider"></span>
         
         <div className="flex items-center gap-6 text-sm font-medium text-textMuted">
           <a href="#proyectos" className="hover:text-primary transition-colors">{t('navProjects')}</a>
@@ -86,7 +86,7 @@ const PortfolioContent = () => {
               </button>
             </div>
 
-            <a href="https://www.linkedin.com/in/mario-alberto-mrodriguez-33a744338/" target="_blank" rel="noreferrer" className="flex items-center gap-2 border border-textMuted/30 bg-surface px-5 py-2.5 rounded-full text-sm hover:border-[#0a66c2] hover:text-[#0a66c2] transition-all">
+            <a href="https://www.linkedin.com/in/mario-alberto-moya-rodríguez-33a744338/" target="_blank" rel="noreferrer" className="flex items-center gap-2 border border-textMuted/30 bg-surface px-5 py-2.5 rounded-full text-sm hover:border-[#0a66c2] hover:text-[#0a66c2] transition-all">
               <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               LinkedIn
             </a>

@@ -18,18 +18,17 @@ export const projectsData: Project[] = [
     title: 'WhatsApp X',
     imageUrl: '/whatsapp.jpg',
     shortDescription: {
-      es: 'Aplicación de mensajería instantánea con traducción automatizada en tiempo real mediante integraciones API y arquitectura escalable.',
-      en: 'Instant messaging application featuring real-time automated translation through API integrations and scalable architecture.',
-      fr: 'Application de messagerie instantanée avec traduction automatisée en temps réel via des intégrations d\'API et une architecture évolutive.',
-      de: 'Instant-Messaging-Anwendung mit automatisierter Echtzeit-Übersetzung durch API-Integrationen und skalierbare Architektur.'
+      es: 'Plataforma de mensajería empresarial que centraliza la comunicación de negocios mediante mensajería multilingüe y colaboración segura en tiempo real.',
+      en: 'Enterprise messaging platform centralizing business communication through multilingual messaging and secure real-time collaboration.',
+      fr: 'Plateforme de messagerie d\'entreprise centralisant la communication commerciale via la messagerie multilingue et la collaboration sécurisée en temps réel.',
+      de: 'Unternehmens-Messaging-Plattform, die die Geschäftskommunikation durch mehrsprachige Nachrichten und sichere Zusammenarbeit in Echtzeit zentralisiert.'
     },
     features: {
-      es: ['Traducción simultánea', 'Canales en tiempo real', 'Cifrado de extremo a extremo'],
-      en: ['Simultaneous translation', 'Real-time channels', 'End-to-end encryption'],
-      fr: ['Traduction simultanée', 'Canaux en temps réel', 'Chiffrement de bout en bout'],
-      de: ['Simultane Übersetzung', 'Echtzeit-Kanäle', 'Ende-zu-Ende-Verschlüsselung']
-    },
-    techStack: ['React', 'Node.js', 'PostgreSQL', 'DeepL API'],
+      es: ['Mensajería en tiempo real', 'Traducción de mensajes', 'Compartir multimedia', 'Comunicación en grupo', 'Autenticación segura'],
+      en: ['Real-time messaging', 'Messages translation', 'Multimedia sharing','Group communication','Secure authentication'],
+      fr: ['Messagerie en temps réel', 'Traduction des messages', 'Partage multimédia', 'Communication de groupe', 'Authentification sécurisée'],
+      de: ['Nachrichten in Echtzeit', 'Nachrichtenübersetzung', 'Multimediafreigabe', 'Gruppenkommunikation', 'Sichere Authentifizierung']    },
+    techStack: ['React', 'Oracle SQL', 'Node.js', 'DeepL API', 'Polling'],
     githubUrl: 'https://whatsapp-x-core.vercel.app'
   },
   {
@@ -37,18 +36,17 @@ export const projectsData: Project[] = [
     title: 'Amar-Te',
     imageUrl: '/amar-te.jpg',
     shortDescription: {
-      es: 'Sistema integral de gestión restaurantera con control de acceso basado en roles, geofencing y persistencia de datos empresarial.',
-      en: 'Comprehensive restaurant management system featuring role-based access control, geofencing, and enterprise-grade data persistence.',
-      fr: 'Système complet de gestion de restaurant avec contrôle d\'accès basé sur les rôles, géofencing et persistance des données d\'entreprise.',
-      de: 'Umfassendes Restaurant-Managementsystem mit rollenbasierter Zugriffskontrolle, Geofencing und Datenpersistenz auf Unternehmensebene.'
+      es: 'Plataforma de operaciones para restaurantes que integra Punto de Venta, Inteligencia de Negocios y coordinación de cocina en tiempo real para optimizar los flujos de trabajo diarios.',
+      en: 'Restaurant operations platform integrating Point of Sale, Business Intelligence, and real-time kitchen coordination to optimize daily workflows.',
+      fr: 'Plateforme d\'exploitation pour restaurants intégrant point de vente, Business Intelligence et coordination de cuisine en temps réel pour optimiser les flux de travail quotidiens.',
+      de: 'Plattform für Restaurantbetriebe, die Point of Sale, Business Intelligence und Echtzeit-Küchenkoordination integriert, um tägliche Arbeitsabläufe zu optimieren.'
     },
     features: {
-      es: ['Geolocalización perimetral', 'Roles de usuario', 'Optimización de consultas'],
-      en: ['Geofencing control', 'User roles management', 'Query optimization'],
-      fr: ['Contrôle de géofencing', 'Gestion des rôles', 'Optimisation des requêtes'],
-      de: ['Geofencing-Kontrolle', 'Rollenverwaltung', 'Abfrageoptimierung']
-    },
-    techStack: ['C#', 'Oracle Database', 'UML Architecture'],
+      es: ['Punto de Venta (POS)', 'Gestión de roles de usuario', 'Paneles de Business Intelligence', 'Control de acceso por geocercas', 'Analítica de rendimiento'],
+      en: ['Point of Sale (POS)', 'User roles management', 'Business Intelligence dashboards', 'Geofencing access control','Performance analytics'],
+      fr: ['Point de vente (POS)', 'Gestion des rôles utilisateur', 'Tableaux de bord Business Intelligence', "Contrôle d'accès par géorepérage", 'Analyse des performances'],
+      de: ['Point of Sale (POS)', 'Verwaltung von Benutzerrollen', 'Business-Intelligence-Dashboards', 'Zugangskontrolle per Geofencing', 'Leistungsanalyse'],    },
+    techStack: ['React', 'Oracle SQL', 'Node.js', 'WebSockets','Cloudinary API'],
     githubUrl: 'https://sistema-amarte.vercel.app'
   },
   {
@@ -57,17 +55,17 @@ export const projectsData: Project[] = [
     imageUrl: '/gutten-kleid.jpg',
     shortDescription: {
       es: 'Plataforma de comercio electrónico de alta fidelidad con pasarela de pagos integrada, gestión de activos multimedia y backend relacional robusto.',
-      en: 'High-fidelity e-commerce platform with integrated payment gateway, multimedia asset management, and a robust relational backend.',
+      en: 'E-commerce platform designed to automate retail operations through secure payments, inventory management, and role-based access control.',
       fr: 'Plateforme e-commerce haute fidélité avec passerelle de paiement intégrée, gestion des actifs multimédias et backend relationnel robuste.',
-      de: 'High-Fidelity-E-Commerce-Plattform mit integriertem Zahlungsgateway, Multimedia-Asset-Management und einem robusten relationalen Backend.'
+      de: 'E‑Commerce-Plattform, die den Einzelhandelsbetrieb durch sichere Zahlungen, Bestandsverwaltung und rollenbasierte Zugriffskontrolle automatisiert.'
     },
     features: {
       es: ['Pasarela de pagos segura', 'Almacenamiento en la nube', 'Diagramación Entidad-Relación'],
-      en: ['Secure payment gateway', 'Cloud asset storage', 'Entity-Relationship blueprinting'],
+      en: ['Secure online payments', 'Inventory management', 'Role-based access control', 'Order tracking', 'Cloud media storage'],
       fr: ['Passerelle de paiement sécurisée', 'Stockage cloud des actifs', 'Conception Entité-Relation'],
-      de: ['Sicheres Zahlungsgateway', 'Cloud-Asset-Speicherung', 'Entitäts-Beziehungs-Design']
+      de: ['Sichere Online-Zahlungen', 'Bestandsverwaltung', 'Rollenbasierte Zugriffskontrolle', 'Bestellverfolgung', 'Medienspeicher in der Cloud'],
     },
-    techStack: ['React', 'Stripe', 'Cloudinary', 'Oracle SQL'],
+    techStack: ['React', 'Oracle SQL', 'Node.js','Stripe API', 'Cloudinary API' ],
     githubUrl: 'https://gutten-kleid-app.vercel.app'
   }
 ];
