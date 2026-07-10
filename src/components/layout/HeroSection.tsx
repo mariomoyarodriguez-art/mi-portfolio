@@ -2,7 +2,9 @@
 import { useLanguage } from '../../context/LanguageContext';
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+
+  const cvHref = language === 'es' ? '/cv_mario_moya_es.pdf' : '/cv_mario_moya_en.pdf';
 
   return (
     <section className="min-h-[85vh] flex flex-col justify-center pt-10 pb-20">
@@ -26,8 +28,9 @@ const HeroSection = () => {
           >
             {t('btnProjects')}
           </a>
+          
           <a 
-            href="/cv_mario_moya.pdf" 
+            href={cvHref} 
             target="_blank"
             rel="noopener noreferrer"
             className="border border-textMuted text-textMain px-8 py-3 rounded-md font-medium hover:border-primary hover:text-primary transition-all text-center flex items-center justify-center gap-2"
