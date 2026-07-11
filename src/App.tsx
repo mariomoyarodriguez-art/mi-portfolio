@@ -1,6 +1,3 @@
-// src/App.tsx
-// git add . git commit -m "" git push origin main
-
 import { useState } from 'react';
 import HeroSection from './components/layout/HeroSection';
 import ProjectCard from './components/ui/ProjectCard';
