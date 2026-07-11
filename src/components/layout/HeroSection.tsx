@@ -3,9 +3,7 @@ import { useLanguage } from '../../context/LanguageContext';
 
 const HeroSection = () => {
   const { language, t } = useLanguage();
-
   const cvHref = language === 'es' ?'/cv_mario_moya_es.pdf' : '/cv_mario_moya_en.pdf';
-
   return (
     <section className="min-h-[85vh] flex flex-col justify-center pt-10 pb-20">
       <div className="max-w-4xl">
