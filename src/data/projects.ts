@@ -60,9 +60,9 @@ export const projectsData: Project[] = [
       de: 'E‑Commerce-Plattform, die den Einzelhandelsbetrieb durch sichere Zahlungen, Bestandsverwaltung und rollenbasierte Zugriffskontrolle automatisiert.'
     },
     features: {
-      es: ['Pasarela de pagos segura', 'Almacenamiento en la nube', 'Diagramación Entidad-Relación'],
+      es: ['Pagos en línea seguros', 'Gestión de inventario', 'Control de acceso basado en roles','Seguimiento de pedidos','Almacenamiento de medios en la nube'],
       en: ['Secure online payments', 'Inventory management', 'Role-based access control', 'Order tracking', 'Cloud media storage'],
-      fr: ['Passerelle de paiement sécurisée', 'Stockage cloud des actifs', 'Conception Entité-Relation'],
+      fr: ['Paiements en ligne sécurisés', 'Gestion des stocks', 'Contrôle d’accès basé sur les rôles','Suivi des commandes','Stockage multimédia dans le cloud'],
       de: ['Sichere Online-Zahlungen', 'Bestandsverwaltung', 'Rollenbasierte Zugriffskontrolle', 'Bestellverfolgung', 'Medienspeicher in der Cloud'],
     },
     techStack: ['React', 'Oracle SQL', 'Node.js','Stripe API', 'Cloudinary API' ],
